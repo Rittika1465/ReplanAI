@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Calendar | RePlan AI</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            RePlan AI
+        </div>
+
+        <nav>
+            <a href="/profile">My Profile</a>
+            <a href="/today">Today's Plan</a>
+            <a href="/chat">Chat</a>
+            <a href="/habits">My Habits</a>
+
+            <a href="/calendar"
+               class="active">
+                Calendar
+            </a>
+
+            <a href="/progress">Progress</a>
+        </nav>
+
+    </aside>
+
+    <main class="main-content calendar-main">
+
+        <div class="page-heading">
+
+            <p class="eyebrow">
+                Weekly schedule
+            </p>
+
+            <h1>Your Calendar</h1>
+
+            <p id="calendarWeek">
+                Loading this week's schedule...
+            </p>
+
+        </div>
+
+        <div class="calendar-controls">
+
+            <button id="previousWeek"
+                    type="button">
+                ← Previous
+            </button>
+
+            <button id="currentWeek"
+                    type="button">
+                This week
+            </button>
+
+            <button id="nextWeek"
+                    type="button">
+                Next →
+            </button>
+
+        </div>
+
+        <p id="calendarStatus"
+           class="empty-note">
+            Loading calendar...
+        </p>
+
+        <section id="calendarGrid"
+                 class="calendar-grid">
+        </section>
+
+    </main>
+
+</div>
+
+<script th:src="@{/js/calendar.js}"></script>
+
+</body>
+</html>

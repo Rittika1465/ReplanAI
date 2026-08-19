@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Progress | RePlan AI</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            RePlan AI
+        </div>
+
+        <nav>
+            <a href="/profile">My Profile</a>
+            <a href="/today">Today's Plan</a>
+            <a href="/chat">Chat</a>
+            <a href="/habits">My Habits</a>
+            <a href="/calendar">Calendar</a>
+
+            <a href="/progress"
+               class="active">
+                Progress
+            </a>
+        </nav>
+
+    </aside>
+
+    <main class="main-content">
+
+        <div class="page-heading">
+
+            <p class="eyebrow">
+                Weekly performance
+            </p>
+
+            <h1>Your Progress</h1>
+
+            <p id="weekRange">
+                Loading this week's progress...
+            </p>
+
+        </div>
+
+        <p id="progressStatus"
+           class="empty-note">
+            Loading progress...
+        </p>
+
+        <section id="progressContent"
+                 hidden>
+
+            <div class="progress-stat-grid">
+
+                <article class="summary-card">
+                    <span>Completion rate</span>
+
+                    <h2 id="weeklyRate">
+                        0%
+                    </h2>
+                </article>
+
+                <article class="summary-card">
+                    <span>Current streak</span>
+
+                    <h2 id="currentStreak">
+                        0 sessions
+                    </h2>
+                </article>
+
+                <article class="summary-card">
+                    <span>Completed</span>
+
+                    <h2 id="completedSessions">
+                        0
+                    </h2>
+                </article>
+
+                <article class="summary-card">
+                    <span>Missed</span>
+
+                    <h2 id="missedSessions">
+                        0
+                    </h2>
+                </article>
+
+            </div>
+
+            <section class="summary-card">
+
+                <div class="summary-heading">
+                    <span>Weekly completion</span>
+
+                    <strong id="weeklyRateLabel">
+                        0%
+                    </strong>
+                </div>
+
+                <div class="progress-track">
+                    <div id="weeklyProgressBar"
+                         class="progress-value">
+                    </div>
+                </div>
+
+                <p id="trackedSessions"
+                   class="form-note">
+                </p>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script th:src="@{/js/progress.js}"></script>
+
+</body>
+</html>

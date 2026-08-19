@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Habits | RePlan AI</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+
+        <div class="brand">RePlan AI</div>
+
+        <nav>
+            <a href="/profile">My Profile</a>
+            <a href="/today">Today's Plan</a>
+            <a href="/chat">Chat</a>
+            <a href="/habits" class="active">My Habits</a>
+            <a href="/calendar">Calendar</a>
+            <a href="/progress">Progress</a>
+        </nav>
+
+    </aside>
+
+    <main class="main-content">
+
+        <div class="page-heading habits-heading">
+
+            <div>
+                <p class="eyebrow">Your routines</p>
+                <h1>My Habits</h1>
+
+                <p>
+                    View the habits you created with RePlan.
+                </p>
+            </div>
+
+            <a href="/chat"
+               class="primary-button create-habit-link">
+                Create with RePlan
+            </a>
+
+        </div>
+
+        <p id="habitStatus"
+           class="empty-note">
+            Loading your habits...
+        </p>
+
+        <div id="habitList"
+             class="habit-list">
+        </div>
+
+    </main>
+
+</div>
+
+<script th:src="@{/js/habits.js}"></script>
+
+</body>
+</html>

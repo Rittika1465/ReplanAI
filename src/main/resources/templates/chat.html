@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Chat | RePlan AI</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+
+        <div class="brand">RePlan AI</div>
+
+        <button id="newChatButton"
+                class="new-chat-button"
+                type="button">
+            + New Chat
+        </button>
+
+
+
+        <nav>
+            <a href="/profile">My Profile</a>
+            <a href="/today">Today's Plan</a>
+            <a href="/chat" class="active">Chat</a>
+            <a href="/habits">My Habits</a>
+            <a href="/calendar">Calendar</a>
+            <a href="/progress">Progress</a>
+        </nav>
+
+        <section class="recent-chat-section">
+
+            <p>Recent chats</p>
+
+            <div id="recentChats"
+                 class="recent-chat-list">
+            </div>
+
+        </section>
+
+    </aside>
+
+    <main class="chat-page">
+
+        <header class="chat-header">
+
+            <div>
+                <p class="eyebrow">Conversational planner</p>
+                <h1>Plan with RePlan</h1>
+            </div>
+
+            <a href="/profile"
+               class="profile-link">
+                My Profile
+            </a>
+
+        </header>
+
+        <section id="chatMessages"
+                 class="chat-messages">
+
+            <div class="message-row assistant-row">
+
+                <div class="message-avatar">R</div>
+
+                <div class="message-content">
+                    <strong>RePlan AI</strong>
+
+                    <div class="message-bubble assistant-bubble">
+                        Hi! Tell me what habit you want to build,
+                        and I’ll help you find a realistic schedule.
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="quick-actions">
+
+                <button type="button"
+                        data-message="I want to create a habit">
+                    Create Habit
+                </button>
+
+                <button type="button"
+                        data-message="Show today's plan">
+                    Today's Plan
+                </button>
+
+                <button type="button"
+                        data-message="Show my habits">
+                    View Habits
+                </button>
+
+                <button type="button"
+                        data-message="Show my progress">
+                    View Progress
+                </button>
+
+                <button type="button"
+                        data-message="RePlan my missed tasks">
+                    RePlan Missed Tasks
+                </button>
+
+            </div>
+
+            <div id="proposalArea"></div>
+
+        </section>
+
+        <div id="chatStatus"
+             class="chat-status"></div>
+
+        <form id="chatForm"
+              class="chat-composer">
+
+            <textarea id="messageInput"
+                      rows="1"
+                      placeholder="Describe a habit..."
+                      required></textarea>
+
+            <button id="sendButton"
+                    type="submit">
+                Send
+            </button>
+
+        </form>
+
+        <p class="composer-note">
+            RePlan will always ask for confirmation before
+            creating or changing a habit.
+        </p>
+
+    </main>
+
+</div>
+
+<script th:src="@{/js/chat.js}"></script>
+
+</body>
+</html>

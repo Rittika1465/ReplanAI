@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | RePlan AI</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <div class="brand">RePlan AI</div>
+
+        <nav>
+            <a href="/profile" class="active">My Profile</a>
+            <a href="/today">Today's Plan</a>
+            <a href="/chat">Chat</a>
+            <a href="/habits">My Habits</a>
+            <a href="/calendar">Calendar</a>
+            <a href="/progress">Progress</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <div class="page-heading">
+            <p class="eyebrow">Scheduling preferences</p>
+            <h1>My Profile</h1>
+
+            <p>
+                RePlan uses these details while suggesting
+                realistic habit times.
+            </p>
+        </div>
+
+        <section class="panel profile-onboarding">
+
+            <div id="profileSetup">
+
+                <div class="setup-progress">
+                    <span id="setupStep">Step 1 of 7</span>
+                </div>
+
+                <div class="setup-message">
+                    <div class="message-avatar">R</div>
+
+                    <div>
+                        <strong>RePlan AI</strong>
+
+                        <p id="setupQuestion">
+                            Hi! What should I call you?
+                        </p>
+                    </div>
+                </div>
+
+                <div id="setupAnswer"
+                     class="setup-answer">
+
+                    <input id="setupInput"
+                           type="text"
+                           placeholder="Enter your answer">
+
+                </div>
+
+                <div class="setup-actions">
+
+                    <button id="setupBackButton"
+                            type="button"
+                            class="change-button"
+                            hidden>
+                        Back
+                    </button>
+
+                    <button id="setupNextButton"
+                            type="button"
+                            class="primary-button">
+                        Next
+                    </button>
+
+                </div>
+
+                <p id="profileStatus"
+                   class="form-note">
+                    RePlan will create your scheduling profile
+                    from these answers.
+                </p>
+
+            </div>
+
+
+            <div id="profileSummary" hidden>
+
+                <h2>Your scheduling profile</h2>
+
+                <div class="profile-summary-grid">
+
+                    <p>
+                        <strong>Name</strong>
+                        <span id="summaryName"></span>
+                    </p>
+
+                    <p>
+                        <strong>Role</strong>
+                        <span id="summaryRole"></span>
+                    </p>
+
+                    <p>
+                        <strong>Available days</strong>
+                        <span id="summaryDays"></span>
+                    </p>
+
+                    <p>
+                        <strong>Preferred time</strong>
+                        <span id="summaryTime"></span>
+                    </p>
+
+                    <p>
+                        <strong>Maximum daily time</strong>
+                        <span id="summaryMinutes"></span>
+                    </p>
+
+                </div>
+
+                <button id="editProfileButton"
+                        type="button"
+                        class="primary-button">
+                    Edit Preferences
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script th:src="@{/js/profile.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Today's Plan | RePlan AI</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            RePlan AI
+        </div>
+
+        <nav>
+            <a href="/profile">
+                My Profile
+            </a>
+
+            <a href="/today"
+               class="active">
+                Today's Plan
+            </a>
+
+            <a href="/chat">
+                Chat
+            </a>
+
+            <a href="/habits">
+                My Habits
+            </a>
+
+            <a href="/calendar">
+                Calendar
+            </a>
+
+            <a href="/progress">Progress</a>
+        </nav>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <div class="page-heading">
+
+            <p class="eyebrow">
+                Your daily schedule
+            </p>
+
+            <h1>Today's Plan</h1>
+
+            <p>
+                Complete a habit or record why it was missed.
+            </p>
+
+        </div>
+
+
+        <section class="summary-card">
+
+            <div class="summary-heading">
+
+                <span>
+                    Daily completion
+                </span>
+
+                <strong id="dailyCompletion">
+                    0%
+                </strong>
+
+            </div>
+
+            <div class="progress-track">
+
+                <div id="dailyProgress"
+                     class="progress-value">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <p id="todayStatus"
+               class="empty-note">
+                Loading today's plan...
+            </p>
+
+            <div id="todayHabitList"
+                 class="habit-list">
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script th:src="@{/js/today.js}"></script>
+
+</body>
+</html>
