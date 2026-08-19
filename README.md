@@ -6,8 +6,6 @@ Unlike a basic habit tracker that only records missed tasks, RePlan creates an a
 ## Demo
 A deployed demonstration is available on request.
 
-> The free hosting instance may take around 50–60 seconds to wake up after a period of inactivity.
-
 ## Key Features
 
 - Conversational profile setup
